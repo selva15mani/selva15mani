@@ -1,0 +1,354 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELVA'S SKILLS|Portfolio</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            background: #0f0f1e;
+            overflow-x: hidden;
+        }
+        a {
+            color: #00e6ff;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+        a:hover {
+            color: #ff007f;
+        }
+
+        /* Neon Animations */
+        @keyframes neonGlow {
+            0%, 100% {
+                text-shadow: 0 0 10px #00e6ff, 0 0 20px #00e6ff
+            }
+            50% {
+                text-shadow: 0 0 20px #ff007f, 0 0 30px #ff007f
+            }
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 50px;
+            position: relative;
+            z-index: 10;
+        }
+        header h1 {
+            font-size: 3rem;
+            animation: neonGlow 2s infinite;
+        }
+        header p {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+        
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #1a1a2f, #0f0f1e);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+        .hero p {
+            font-size: 1rem;
+            max-width: 600px;
+            text-align: center;
+            color: #aaa;
+        }
+         /* Social Media Icons */
+         .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .social-icons img {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #00e6ff;
+            border-radius: 15px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .social-icons img:hover {
+            transform: scale(1.2);
+            border-color: #ff007f;
+        }
+
+        /* Image Styling and Animation */
+        .hero-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #00e6ff;
+            animation: imgAnimate 2s ease-in-out infinite;
+        }
+        @keyframes imgAnimate {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+        }
+        
+        /* Background Animation */
+        .bg-animations {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .circle {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: rgba(0, 230, 255, 0.7);
+            animation: float 10s infinite;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(50vw);
+                opacity: 0;
+            }
+        }
+
+        /* Section */
+        section {
+            padding: 50px 10%;
+            text-align: center;
+            position: relative;
+        }
+        .section-title {
+            font-size: 2rem;
+            color: #00e6ff;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::before,
+        .section-title::after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            background: #00e6ff;
+            width: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .section-title::before {
+            left: -70px;
+        }
+        .section-title::after {
+            right: -70px;
+        }
+
+        /* Skills & Projects Cards */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .card {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 5px 20px rgba(0, 230, 255, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 40px rgba(255, 0, 127, 0.8);
+        }
+        .card h3 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .card p {
+            color: #ccc;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a2f;
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid #00e6ff;
+        }
+        footer p {
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+  <!-- Header -->
+    <header>
+        <h1>HELLO DEVELOPERS, IAM SELVAMANI WELCOME TO MY PORTFOLIO</h1>
+        <p>JR.Software Engineer | JR.Web Developer |JR.App Developer </p>
+    </header>
+<!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h2>Welcome to My New Planet</h2>
+            <p>Discover my New journey in technology, creativity, and innovation.</p>
+        </div>
+        <div class="social-icons">
+            <!-- QR Code Images -->
+            <a href="https://wa.me/7539905792" target="_blank">
+                <img src="imagewhatsapp.png" alt="WhatsApp QR Code">
+            </a>
+            <a href="https://www.instagram.com/SELVA_DEVOPS/" target="_blank">
+                <img src="imageinsta.png" alt="Instagram QR Code">
+            </a>
+            <a href="https://t.me/7539905792" target="_blank">
+                <img src="imageteleg.png" alt="Telegram QR Code">
+            </a>
+        </div>
+      
+      
+<img src="selva1lik.jpg" alt="Selva" class="hero-img">
+        <div class="bg-animations">
+        </div>
+            <!-- Floating Circles -->
+            <div class="circle" style="top: 10%; left: 20%; animation-delay: 0s;"></div>
+            <div class="circle" style="top: 30%; left: 40%; animation-delay: 1s;"></div>
+            <div class="circle" style="top: 50%; left: 70%; animation-delay: 2s;"></div>
+            <div class="circle" style="top: 70%; left: 10%; animation-delay: 3s;"></div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section>
+        <div class="section-title">About Me</div>
+        <div class="card-container">
+            <div class="card">
+                <p>Selvamani, a Junior Software Engineer skilled in full-stack development, app development, innovation, and problem-solving to build impactful solutions. I have a passion for learning new technologies and developing efficient solutions to real-world problems.</p>
+            </div>
+         <div class="card-container">
+            <div class="card">
+                <p>I am constantly evolving my skills in areas like Hardware, and software architecture. My goal is to collaborate on projects that have a meaningful impact and make the world a better place. Feel free to explore my portfolio and contact me for any collaboration or inquiries </p>
+        </div>
+         </div>
+         
+              
+
+    </section>
+
+    <!-- Skills Section -->
+    <section>
+        <div class="section-title">Skills</div>
+        <div class="card-container">
+            <div class="card">
+                <h3>Front-End skills</h3>
+                <p>HTML, CSS, Javascript </p>
+            </div>
+            <div class="card">
+                <h3>Back-End skills</h3>
+                <p>Python, SQL, C, C++, JAVA</p>
+            </div>
+            <div class="card">
+                <h3>Tools</h3>
+                <p>React.js, Node.js, Bootstrap, Django, MongoDB, Git</p>
+            </div>
+            <div class="card">
+                <h3>Soft skills</h3>
+                <p> Leadership, Team Communication, Paper Presentation </p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section>
+        <div class="section-title">Projects</div>
+        <div class="card-container">
+            <div class="card">
+                <h3>Fake News Detection</h3>
+                <p>Developed a machine learning model to detect fake news using Python.</p>
+            </div>
+            <div class="card">
+                <h3>Netflix Clone</h3>
+                <p>Created a responsive front-end clone of Netflix using HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="card">
+                <h3>Smartwatch AI</h3>
+                <p>Developing and case study a blood group detection system integrating AI and sensors.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Me Section -->
+    <section>
+        <div class="section-title">Contact Me</div>
+        <p>Reach out for queries, collaborations, or just to say hi! Fill out the form below, and I'll get back to you soon.</p>
+        <form action="#" method="POST" style="max-width: 600px; margin: 0 auto; padding: 20px; border-radius: 10px; background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(15, 15, 30, 0.9)); box-shadow: 0 5px 20px rgba(0, 230, 255, 0.5);">
+            <div style="margin-bottom: 15px;">
+                <label for="name" style="display: block; font-size: 1rem; margin-bottom: 5px; color: #00e6ff;">Name</label>
+                <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid rgba(255, 255, 255, 0.3); background: transparent; font-size: 1rem; color: #fff; outline: none; transition: box-shadow 0.3s ease;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="email" style="display: block; font-size: 1rem; margin-bottom: 5px; color: #00e6ff;">Email</label>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid rgba(255, 255, 255, 0.3); background: transparent; font-size: 1rem; color: #fff; outline: none; transition: box-shadow 0.3s ease;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="phone" style="display: block; font-size: 1rem; margin-bottom: 5px; color: #00e6ff;">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid rgba(255, 255, 255, 0.3); background: transparent; font-size: 1rem; color: #fff; outline: none; transition: box-shadow 0.3s ease;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="query" style="display: block; font-size: 1rem; margin-bottom: 5px; color: #00e6ff;">Your Query</label>
+                <textarea id="query" name="query" rows="5" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid rgba(255, 255, 255, 0.3); background: transparent; font-size: 1rem; color: #fff; outline: none; transition: box-shadow 0.3s ease;"></textarea>
+            </div>
+            <div>
+                <button type="submit" style="padding: 10px 20px; font-size: 1rem; border: none; border-radius: 5px; background: linear-gradient(135deg, #00e6ff, #ff007f); color: #0f0f1e; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 5px 15px rgba(255, 0, 127, 0.8);">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/selvamanidevops" target="_blank">LinkedIn</a> | <a href="selvamanirdj@gmail.com">Email</a></p>
+        <p>© 2024 Selva. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
